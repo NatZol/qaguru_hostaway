@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.Project;
@@ -22,12 +23,8 @@ public class TestBase {
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
+        Configuration.timeout = 6000;
     }
-
-//    @BeforeEach
-//    public void openUrl() {
-//        open("https://www.hostaway.com/");
-//    }
 
     @AfterEach
     public void addAttachments() {
