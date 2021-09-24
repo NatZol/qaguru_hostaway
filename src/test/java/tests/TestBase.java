@@ -10,7 +10,10 @@ import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
+
+import static com.codeborne.selenide.Selenide.open;
 
 
 @ExtendWith({AllureJunit5.class})
@@ -20,6 +23,11 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
     }
+
+//    @BeforeEach
+//    public void openUrl() {
+//        open("https://www.hostaway.com/");
+//    }
 
     @AfterEach
     public void addAttachments() {
