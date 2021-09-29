@@ -1,4 +1,4 @@
-# Automation for **Hostaway**, [**https://www.hostaway.com/**](https://www.hostaway.com/)
+# Automation for **Hostaway** site [**https://www.hostaway.com/**](https://www.hostaway.com/)
 
 ## Technologies and tools
 Tests were written with using Java + JUnit5 + Selenide + Gradle
